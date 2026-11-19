@@ -84,14 +84,13 @@ section{padding:90px 0;position:relative}
 .pillar .ic svg{width:26px;height:26px}
 
 /* MAPS */
-.maps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.maps{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .map{border-radius:var(--r);overflow:hidden;background:var(--navy2);border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
 .map:hover{border-color:rgba(226,185,90,.6);transform:translateY(-3px)}
 .thumb{aspect-ratio:16/9;position:relative;background:linear-gradient(135deg,#1c2a63,#0b1130);overflow:hidden}
 .thumb img{width:100%;height:100%;object-fit:cover}
 .thumb .ph{position:absolute;inset:0;display:grid;place-items:center;font-family:Cinzel,serif;font-weight:900;font-size:2rem;color:rgba(246,231,191,.9);letter-spacing:.08em;text-align:center;padding:10px}
 .thumb.t-tunnel{background:radial-gradient(circle at 50% 120%,#3b1f73,#0b0a24 70%)}
-.thumb.t-silam{background:radial-gradient(circle at 30% 20%,#1f4a3a,#06110f 75%)}
 .map .body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
 .map h3{font-size:1.25rem}
 .map p{color:var(--muted);font-size:.93rem;flex:1}
@@ -145,7 +144,6 @@ footer a:hover{color:var(--gold2)}
 @media (max-width:900px){
   .hero .wrap,.support-grid{grid-template-columns:1fr}
   .crest{max-width:280px;order:-1}
-  .maps{grid-template-columns:1fr 1fr}
   .about-grid,.services{grid-template-columns:1fr}
   .links{position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:0;background:var(--ink);border-bottom:1px solid var(--line);display:none}
   .links.open{display:flex}
@@ -195,14 +193,14 @@ footer a:hover{color:var(--gold2)}
   <div class="wrap">
     <div>
       <h1>TRO LABS<span>THE RESILIENT ORDER</span></h1>
-      <p class="lead">Rumah TRO TEAM. Kami bikin map Roblox buat nongkrong, joget, dan bikin cerita bareng, dari club R&amp;B sampai desa horor. Semua dirakit sendiri, dari map sampai script-nya.</p>
+      <p class="lead">Rumah TRO TEAM. Kami bikin map Roblox buat nongkrong, joget, dan bikin cerita bareng, dari club R&amp;B sampai klub dansa di terowongan. Semua dirakit sendiri, dari map sampai script-nya.</p>
       <div class="cta">
         <a class="btn btn-gold" href="#map">Main map kami</a>
         <a class="btn btn-ghost" href="#dukung">Dukung TRO</a>
       </div>
       <div class="stats">
         <div><b>49K+</b><small>kunjungan map</small></div>
-        <div><b>5</b><small>map publik</small></div>
+        <div><b>2</b><small>club dansa</small></div>
         <div><b>300+</b><small>warga Discord</small></div>
       </div>
     </div>
@@ -245,7 +243,7 @@ footer a:hover{color:var(--gold2)}
       <div class="pillar">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7.5 14h9"/></svg></div>
         <h3>TRO LABS</h3>
-        <p>Studionya. Bikin map Roblox (dance club, hangout, horor) dan script sistem buatan sendiri, dari dance sync sampai papan donasi, yang juga kami jual ke developer lain.</p>
+        <p>Studionya. Bikin map Roblox (dance club dan hangout) dan script sistem buatan sendiri, dari dance sync sampai papan donasi, yang juga kami jual ke developer lain.</p>
       </div>
     </div>
   </div>
@@ -267,11 +265,6 @@ footer a:hover{color:var(--gold2)}
         <div class="thumb t-tunnel"><div class="ph">TUNNEL</div></div>
         <div class="body"><h3>TUNNEL</h3><p>Klub dansa di dalam terowongan beton. Joget bareng, dengerin DJ, dan nikmatin show lampu kayak konser.</p>
           <div class="meta"><span class="tag">Dance club</span><span class="play">Main <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2l10 6-10 6z"/></svg></span></div></div>
-      </a>
-      <a class="map" href="https://www.roblox.com/games/122740285666494" target="_blank" rel="noopener">
-        <div class="thumb t-silam"><div class="ph">DESA SILAM</div></div>
-        <div class="body"><h3>DESA SILAM</h3><p>Horor co-op di desa Bali. Pecahkan teka-teki bareng tim sebelum desa yang menunggu menelan kalian.</p>
-          <div class="meta"><span class="tag">Horor co-op</span><span class="play">Main <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2l10 6-10 6z"/></svg></span></div></div>
       </a>
     </div>
     <p class="note">Map lain (LASTCALL, THE HOOD OF TRO, dan lainnya) diumumkan di Discord begitu rilis. Lihat semua di <a href="https://www.roblox.com/communities/901582211" target="_blank" rel="noopener" style="color:var(--gold2)">komunitas Roblox TRO - TEAM</a>.</p>
