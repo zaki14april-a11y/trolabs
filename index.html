@@ -2,476 +2,533 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>TRO.LABS — The Resilient Order</title>
-<meta name="description" content="Rumah resmi TRO (The Resilient Order): komunitas Roblox Indonesia. TRO FAMS, map ON THE RUGS & TUNNEL, shop script TRO LABS, Robux, dan donasi.">
+<meta name="description" content="Launcher resmi TRO (The Resilient Order): komunitas Roblox Indonesia. TRO Fams, map ON THE RUGS & TUNNEL, shop script TRO LABS, Robux, dan donasi.">
 <meta property="og:title" content="TRO.LABS — The Resilient Order">
-<meta property="og:description" content="Komunitas, map, shop script, Robux, dan donasi TRO dalam satu tempat.">
+<meta property="og:description" content="Komunitas, map, shop script, Robux, dan donasi TRO.">
 <meta property="og:image" content="https://tr.rbxcdn.com/180DAY-757a7c50298228c6ab82af2fcc73d4c9/768/432/Image/Png/noFilter">
-<meta name="theme-color" content="#0c1022">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 90,27 90,73 50,96 10,73 10,27' fill='%230c1022' stroke='%23c8a04a' stroke-width='7'/%3E%3Cpath d='M43 26h14v16l14 26H29l14-26z' fill='%23c8a04a'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#070a16">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 90,27 90,73 50,96 10,73 10,27' fill='%23070a16' stroke='%23d8b25c' stroke-width='7'/%3E%3Cpath d='M43 26h14v16l14 26H29l14-26z' fill='%23d8b25c'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Saira:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#0c1022;--ink2:#141a33;--paper:#efe7d6;--paper2:#e4d9c2;--gold:#c8a04a;--gold2:#e9cf8f;--red:#b3261e;--red2:#8e1c16;--mute:#8b8fa6;--line:rgba(239,231,214,.14);--lineD:rgba(12,16,34,.16)}
+:root{--bg:#070a16;--gold:#d8b25c;--gold2:#f3d98f;--txt:#eef0f7;--sub:#a5abc2;--glass:rgba(12,16,34,.62);--edge:rgba(255,255,255,.09);--side:96px}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-html,body{overflow-x:clip}
-body{font-family:"Instrument Sans",system-ui,sans-serif;background:var(--ink);color:var(--paper);line-height:1.6;font-size:17px;overflow-x:hidden}
-a{color:inherit}img{display:block;max-width:100%}
-button{font:inherit;cursor:pointer;color:inherit}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.w{width:min(1180px,100% - 40px);margin-inline:auto}
-.d{font-family:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;font-weight:900;text-transform:uppercase;line-height:.88;letter-spacing:.005em}
-h2.d{font-size:clamp(3rem,8vw,6.6rem)}
-.lede{font-size:1.15rem;max-width:56ch}
-.paper{background:var(--paper);color:var(--ink)}
-.paper .mute{color:#5a5d70}
-.mute{color:var(--mute)}
-section{padding:100px 0}
+html,body{height:100%}
+body{font-family:Saira,system-ui,sans-serif;background:var(--bg);color:var(--txt);overflow:hidden;font-size:16px;line-height:1.55}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.h{font-family:"Saira Condensed",Saira,sans-serif;font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:.01em}
 
-/* bar */
-.bar{position:sticky;top:0;z-index:40;background:var(--ink);border-bottom:1px solid var(--line)}
-.bar .w{display:flex;align-items:center;height:62px;gap:28px}
-.logo{display:flex;align-items:center;gap:9px;text-decoration:none;font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:1.55rem;letter-spacing:.02em}
-.logo svg{width:30px;height:30px}.logo span{color:var(--gold);margin:0 -9px}
-.nav{display:flex;gap:22px;margin-left:auto;font-size:.95rem}
-.nav a{text-decoration:none;color:var(--mute);font-weight:500}
-.nav a:hover{color:var(--paper)}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border:1.5px solid currentColor;font-weight:700;text-decoration:none;font-size:.97rem;transition:background .15s,color .15s,border-color .15s;white-space:nowrap}
-.btn svg{width:18px;height:18px}
-.btn.solid{background:var(--gold);border-color:var(--gold);color:var(--ink)}
-.btn.solid:hover{background:var(--gold2);border-color:var(--gold2)}
-.btn.line:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.paper .btn.line:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.btn.red{background:var(--red);border-color:var(--red);color:var(--paper)}
-.btn.red:hover{background:var(--red2);border-color:var(--red2)}
-.btn.dc{background:#5865f2;border-color:#5865f2;color:#fff}
-.btn.dc:hover{background:#4752d6;border-color:#4752d6}
-.btn.sm{padding:9px 16px;font-size:.9rem}
-.burger{display:none;margin-left:auto;background:none;border:1.5px solid var(--line);padding:7px 12px;font-weight:600}
+/* background */
+.bgs{position:fixed;inset:0;z-index:0}
+.bgs > div{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.06);transition:opacity .8s ease,transform 6s ease}
+.bgs > div.on{opacity:1;transform:scale(1)}
+.bgs::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,10,22,.96) 0%,rgba(7,10,22,.82) 38%,rgba(7,10,22,.35) 75%,rgba(7,10,22,.55) 100%),linear-gradient(0deg,rgba(7,10,22,.9) 0%,transparent 40%)}
+.bg-tunnel{background:radial-gradient(ellipse at 70% 60%,#7d4cff55,transparent 55%),radial-gradient(ellipse at 85% 30%,#ff4fa344,transparent 45%),repeating-radial-gradient(ellipse at 72% 100%,#0b0716 0 34px,#2a1b55 36px,#0b0716 40px),#0b0716}
+.bg-gold{background:radial-gradient(ellipse at 75% 40%,#d8b25c33,transparent 55%),radial-gradient(ellipse at 90% 90%,#5865f233,transparent 50%),#0a0e1e}
 
-/* hero */
-.hero{padding:70px 0 0;position:relative;overflow:hidden}
-.hero .top{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:40px;align-items:end}
-.hero h1{font-size:clamp(3rem,11vw,10.5rem);color:var(--paper)}
-.hero h1 em{font-style:normal;color:var(--gold);display:block}
-.hero aside{padding-bottom:18px}
-.hero aside svg{width:150px;margin-bottom:26px}
-.hero aside p{color:#c9c3b4;margin-bottom:22px}
-.hero .cta{display:flex;flex-wrap:wrap;gap:10px}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:60px}
-.facts div{padding:22px 0 26px;border-right:1px solid var(--line);padding-left:20px}
-.facts div:first-child{padding-left:0}.facts div:last-child{border:0}
-.facts b{display:block;font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:2.6rem;line-height:1;color:var(--paper)}
-.facts small{color:var(--mute);font-size:.9rem}
+/* sidebar */
+.side{position:fixed;left:0;top:0;bottom:0;width:var(--side);z-index:20;display:flex;flex-direction:column;align-items:center;background:rgba(5,7,15,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-right:1px solid var(--edge);padding:18px 0}
+.crest{width:52px;height:52px;margin-bottom:20px}
+.menu{display:flex;flex-direction:column;gap:4px;width:100%}
+.menu a{position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;padding:11px 0;color:var(--sub);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:color .15s}
+.menu a svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.menu a:hover{color:var(--txt)}
+.menu a.on{color:var(--gold)}
+.menu a.on::before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:3px;background:var(--gold);box-shadow:0 0 14px var(--gold)}
+.side .dcb{margin-top:auto;width:46px;height:46px;display:grid;place-items:center;background:#5865f2;border-radius:12px}
+.side .dcb svg{width:24px;height:24px}
 
-/* ticker */
-.ticker{background:var(--red);color:var(--paper);overflow:hidden;white-space:nowrap;border-block:1px solid var(--red2)}
-.ticker div{display:inline-block;padding:16px 0;animation:tick 38s linear infinite}
-.ticker span{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:1.6rem;text-transform:uppercase;letter-spacing:.04em;margin-right:42px}
-.ticker span::after{content:"";display:inline-block;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);margin-left:42px;vertical-align:middle}
-@keyframes tick{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.ticker div{animation:none}html{scroll-behavior:auto}}
+/* stage */
+.stage{position:fixed;left:var(--side);right:0;top:0;bottom:0;z-index:10}
+.top{position:absolute;left:0;right:0;top:0;height:72px;display:flex;align-items:center;gap:18px;padding:0 48px;z-index:5}
+.crumb{font-family:"Saira Condensed";font-weight:700;letter-spacing:.14em;color:var(--sub);font-size:.95rem}
+.crumb b{color:var(--txt)}
+.online{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--sub)}
+.online i{width:8px;height:8px;border-radius:50%;background:#3ddc84;box-shadow:0 0 10px #3ddc84}
+.page{position:absolute;inset:72px 0 0 0;padding:20px 48px 40px;overflow-y:auto;opacity:0;visibility:hidden;transform:translateX(26px);transition:opacity .35s ease,transform .45s cubic-bezier(.2,.7,.2,1),visibility 0s .45s}
+.page.on{opacity:1;visibility:visible;transform:none;transition:opacity .35s ease,transform .45s cubic-bezier(.2,.7,.2,1)}
+.page::-webkit-scrollbar{width:8px}.page::-webkit-scrollbar-thumb{background:#ffffff1f;border-radius:8px}
+@media (prefers-reduced-motion:reduce){.page,.bgs>div{transition:none!important;transform:none!important}}
 
-/* about */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
-.about .big{font-size:clamp(1.5rem,2.6vw,2.05rem);line-height:1.35;font-weight:500;letter-spacing:-.01em}
-.about .big b{font-weight:700}
-.divs{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:80px;border-top:2px solid var(--ink)}
-.divs div{padding:22px 22px 0 0}
-.divs h3{font-size:2.3rem;margin-bottom:10px}
-.divs p{font-size:.97rem;color:#4a4d60}
+.glass{background:var(--glass);border:1px solid var(--edge);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:10px;font-weight:700;font-size:1rem;letter-spacing:.04em;text-transform:uppercase;transition:transform .12s,filter .15s,background .15s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px}
+.play{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#1a1405;box-shadow:0 8px 30px -8px #d8b25caa}
+.play:hover{filter:brightness(1.08)}
+.ghost{background:rgba(255,255,255,.07);border:1px solid var(--edge)}
+.ghost:hover{background:rgba(255,255,255,.13)}
+.dc{background:#5865f2;color:#fff}.dc:hover{background:#4752d6}
+.sm{height:40px;padding:0 16px;font-size:.85rem}
+.title{font-size:clamp(2.6rem,5vw,4.4rem);margin-bottom:10px}
+.lead{color:var(--sub);max-width:58ch;font-size:1.05rem}
+.kick{color:var(--gold);font-weight:700;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px;display:block}
+
+/* home */
+.home{display:flex;flex-direction:column;min-height:100%}
+.home .hero{max-width:640px;margin-top:1vh}
+.home h1{font-size:clamp(3.2rem,7vw,6.4rem);line-height:.86}
+.home h1 span{color:var(--gold);display:block}
+.home .hero p{color:#c9cde0;font-size:1.12rem;max-width:48ch;margin:22px 0 30px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.tiles{margin-top:auto;padding-top:40px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:1100px}
+.tile{position:relative;padding:18px;min-height:132px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;transition:border-color .2s,transform .2s}
+.tile:hover{border-color:#d8b25c88;transform:translateY(-3px)}
+.tile .ic{position:absolute;top:16px;left:18px;width:34px;height:34px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tile b{font-family:"Saira Condensed";font-weight:800;font-size:1.45rem;text-transform:uppercase;line-height:1}
+.tile small{color:var(--sub);font-size:.85rem}
+.tile .go{position:absolute;right:16px;top:16px;color:var(--sub);font-size:1.2rem}
+.stats{display:flex;gap:34px;margin-top:34px}
+.stats div b{display:block;font-family:"Saira Condensed";font-weight:800;font-size:2.1rem;line-height:1}
+.stats div small{color:var(--sub);font-size:.82rem}
+
+/* grid helpers */
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.card{padding:22px}
+.card h3{font-family:"Saira Condensed";font-weight:800;font-size:1.6rem;text-transform:uppercase;line-height:1;margin-bottom:8px}
+.card p{color:var(--sub);font-size:.95rem}
+.card .ic{width:30px;height:30px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.sec{margin-top:34px}
+.sec > h2{font-family:"Saira Condensed";font-weight:800;font-size:1.25rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sub);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.sec > h2::after{content:"";flex:1;height:1px;background:var(--edge)}
 
 /* fams */
-.acts{margin-top:46px;border-top:1px solid var(--line)}
-.act{display:grid;grid-template-columns:320px 1fr auto;gap:30px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line)}
-.act h3{font-size:clamp(2rem,4vw,2.6rem)}
-.act p{color:#c9c3b4;max-width:52ch}
-.act small{color:var(--gold);font-weight:600}
-.join{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:70px}
-.join li{list-style:none;border-top:3px solid var(--gold);padding-top:16px}
-.join li b{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:3.4rem;line-height:1;color:var(--gold);display:block;margin-bottom:8px}
-.join li strong{display:block;font-size:1.1rem;margin-bottom:4px}
-.join li span{color:#c9c3b4;font-size:.96rem}
-.invite{margin-top:70px;background:var(--red);padding:44px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
-.invite h3{font-size:clamp(2.2rem,4vw,3.4rem)}
-.invite p{max-width:58ch;margin-top:10px}
-.ranks{margin-top:80px;display:grid;grid-template-columns:260px 1fr;gap:50px}
-.ranks h3{font-size:2.8rem}
-.ranks table{width:100%;border-collapse:collapse}
-.ranks td{padding:15px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
-.ranks td:first-child{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:1.6rem;text-transform:uppercase;width:40%;color:var(--paper)}
-.ranks td:last-child{color:#c9c3b4}
+.acts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.acts .card small{display:inline-block;margin-top:12px;font-size:.78rem;font-weight:700;color:var(--gold);letter-spacing:.08em;text-transform:uppercase}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;counter-reset:s}
+.steps .card{counter-increment:s;position:relative;padding-top:52px}
+.steps .card::before{content:counter(s);position:absolute;top:16px;left:22px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#1a1405;font-weight:800;font-size:.9rem}
+.ranks{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.rank{padding:18px 14px;text-align:center}
+.rank .badge{width:58px;height:58px;margin:0 auto 12px}
+.rank b{display:block;font-family:"Saira Condensed";font-weight:800;font-size:1.15rem;text-transform:uppercase;line-height:1.05}
+.rank small{color:var(--sub);font-size:.8rem;display:block;margin-top:6px}
+.banner{margin-top:16px;padding:24px 26px;display:flex;align-items:center;gap:20px;justify-content:space-between;flex-wrap:wrap;background:linear-gradient(90deg,rgba(216,178,92,.18),rgba(12,16,34,.6))}
+.banner h3{font-family:"Saira Condensed";font-weight:800;font-size:1.7rem;text-transform:uppercase}
+.banner p{color:var(--sub);max-width:60ch}
 
-/* maps */
-.maps{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;margin-top:50px}
-.mapc{display:flex;flex-direction:column;text-decoration:none;color:inherit}
-.shot{position:relative;aspect-ratio:16/9;overflow:hidden;background:#20132a}
-.shot img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.mapc:hover .shot img{transform:scale(1.03)}
-.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:6px}
-.strip img{aspect-ratio:16/9;object-fit:cover;width:100%}
-.mapc h3{font-size:clamp(2.4rem,5vw,3.4rem);margin-top:20px}
-.mapc p{color:var(--mute);margin:8px 0 16px;max-width:48ch}
-.mapc .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.mapc .tags span{border:1px solid var(--line);padding:3px 10px;font-size:.85rem;color:#c9c3b4}
-.mapc .btn{align-self:flex-start}
-.tunnel svg{width:100%;height:100%}
+/* map */
+.mapv{display:flex;flex-direction:column;min-height:100%}
+.mapinfo{max-width:560px;margin-top:3vh}
+.mapinfo h1{font-size:clamp(3.2rem,7.5vw,6.6rem);line-height:.86;margin-bottom:16px}
+.mapinfo p{color:#c9cde0;font-size:1.06rem;margin-bottom:18px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.chips span{padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--edge);font-size:.82rem;font-weight:600}
+.mstat{display:flex;gap:30px;margin-bottom:26px}
+.mstat b{display:block;font-family:"Saira Condensed";font-weight:800;font-size:1.9rem;line-height:1}
+.mstat small{color:var(--sub);font-size:.8rem}
+.picker{margin-top:auto;padding-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.pick{width:250px;padding:0;overflow:hidden;text-align:left;transition:border-color .2s,transform .2s}
+.pick .th{height:120px;background-size:cover;background-position:center}
+.pick div:last-child{padding:12px 14px}
+.pick b{font-family:"Saira Condensed";font-weight:800;font-size:1.25rem;text-transform:uppercase;display:block;line-height:1}
+.pick small{color:var(--sub);font-size:.8rem}
+.pick.on{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 10px 30px -10px #d8b25c88}
+.pick:hover{transform:translateY(-3px)}
 
 /* shop */
-.tabs{display:flex;gap:26px;margin:40px 0 0;border-bottom:2px solid var(--ink)}
-.tabs button{background:none;border:0;padding:10px 0;font-weight:700;font-size:1rem;color:#6a6d7e;border-bottom:3px solid transparent;margin-bottom:-2px}
-.tabs button.on{color:var(--ink);border-color:var(--red)}
-.items{list-style:none}
-.item{display:grid;grid-template-columns:1.1fr 1.6fr 110px 120px;gap:26px;align-items:center;padding:24px 0;border-bottom:1px solid var(--lineD)}
-.item h3{font-size:2rem}
-.item p{color:#4a4d60;font-size:.97rem}
-.item .k{font-size:.85rem;font-weight:700;color:var(--red)}
-.item .btn{justify-self:end}
-.item .soon{justify-self:end;font-size:.88rem;color:#6a6d7e;font-weight:600}
-.howto{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:70px;align-items:start}
-.howto ol{list-style:none;counter-reset:n}
-.howto li{counter-increment:n;display:grid;grid-template-columns:54px 1fr;padding:14px 0;border-top:1px solid var(--lineD)}
-.howto li::before{content:counter(n,decimal-leading-zero);font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:1.7rem;color:var(--red);line-height:1.1}
-.howto li strong{display:block}
-.howto li span{color:#4a4d60;font-size:.96rem}
-.rules{background:var(--ink);color:var(--paper);padding:34px}
-.rules h3{font-size:2.2rem;margin-bottom:12px}
-.rules p{color:#c9c3b4;margin-bottom:20px}
+.shopwrap{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px;align-items:start}
+.filters{display:flex;gap:8px;margin:22px 0 16px;flex-wrap:wrap}
+.filters button{padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--edge);font-weight:600;font-size:.9rem;color:var(--sub)}
+.filters button.on{background:var(--gold);border-color:var(--gold);color:#1a1405}
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.item{display:flex;flex-direction:column;padding:0;overflow:hidden}
+.item .art{height:110px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(216,178,92,.22),rgba(88,101,242,.16));border-bottom:1px solid var(--edge);position:relative}
+.item .art svg{width:46px;height:46px;stroke:var(--gold2);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.item .tag{position:absolute;top:10px;left:10px;padding:3px 9px;border-radius:6px;background:rgba(7,10,22,.75);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.item .bd{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.item h3{font-family:"Saira Condensed";font-weight:800;font-size:1.3rem;text-transform:uppercase;line-height:1.05;margin-bottom:6px}
+.item p{color:var(--sub);font-size:.88rem;flex:1;margin-bottom:14px}
+.item .btn{width:100%}
+.item .soon{text-align:center;font-size:.85rem;color:var(--sub);font-weight:600;padding:10px 0;border:1px dashed var(--edge);border-radius:10px}
+.howbox{padding:22px;position:sticky;top:0}
+.howbox h3{font-family:"Saira Condensed";font-weight:800;font-size:1.5rem;text-transform:uppercase;margin-bottom:12px}
+.ol{list-style:none;counter-reset:o}
+.ol li{counter-increment:o;display:grid;grid-template-columns:30px 1fr;gap:4px;padding:10px 0;border-top:1px solid var(--edge);font-size:.92rem}
+.ol li::before{content:counter(o);width:22px;height:22px;border-radius:50%;background:rgba(216,178,92,.18);color:var(--gold);display:grid;place-items:center;font-weight:800;font-size:.78rem;margin-top:2px}
+.ol li b{display:block}
+.ol li span{color:var(--sub)}
+.note{margin:16px 0;padding:12px 14px;border-radius:10px;background:rgba(255,80,80,.08);border:1px solid rgba(255,80,80,.25);font-size:.85rem;color:#f3c4c4}
 
 /* robux */
-.rbx{display:grid;grid-template-columns:1fr 1fr;gap:70px;margin-top:50px;align-items:start}
-.calc{border:1px solid var(--line);padding:34px;background:var(--ink2)}
-.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0 22px}
-.pk button{background:none;border:1px solid var(--line);padding:12px 6px;font-weight:700;text-align:center}
-.pk button small{display:block;font-weight:500;color:var(--mute);font-size:.82rem}
-.pk button.on{border-color:var(--gold);background:rgba(200,160,74,.12)}
-.inp{display:flex;align-items:baseline;gap:10px;border-bottom:2px solid var(--gold);padding-bottom:8px}
-.inp input{flex:1;min-width:0;background:none;border:0;color:var(--paper);font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:3.6rem;line-height:1;outline:none}
-.inp span{color:var(--mute);font-weight:600}
-.sum{margin-top:26px;display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
-.sum b{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:3.4rem;line-height:1;color:var(--gold)}
-.warn{color:#ff9d7a;font-size:.9rem;min-height:1.3em;margin-top:6px}
-.steps{list-style:none;counter-reset:n}
-.steps li{counter-increment:n;display:grid;grid-template-columns:54px 1fr;padding:16px 0;border-top:1px solid var(--line)}
-.steps li::before{content:counter(n,decimal-leading-zero);font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:1.7rem;color:var(--gold);line-height:1.1}
-.steps strong{display:block}
-.steps span{color:#c9c3b4;font-size:.96rem}
+.rbxwrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:20px;align-items:start;margin-top:24px;max-width:1100px}
+.calc{padding:26px}
+.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px}
+.pk button{padding:12px 6px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid var(--edge);font-weight:800;font-family:"Saira Condensed";font-size:1.3rem;line-height:1.1}
+.pk button small{display:block;font-family:Saira;font-weight:500;font-size:.78rem;color:var(--sub)}
+.pk button.on{border-color:var(--gold);background:rgba(216,178,92,.14)}
+.inp{display:flex;align-items:center;gap:12px;padding:10px 16px;border-radius:10px;background:rgba(0,0,0,.3);border:1px solid var(--edge)}
+.inp svg{width:28px;height:28px;flex:none}
+.inp input{flex:1;min-width:0;background:none;border:0;color:var(--txt);font-family:"Saira Condensed";font-weight:800;font-size:2.4rem;outline:none}
+.inp span{color:var(--sub);font-weight:600}
+.total{display:flex;justify-content:space-between;align-items:flex-end;margin:20px 0 6px;gap:10px;flex-wrap:wrap}
+.total small{color:var(--sub)}
+.total b{font-family:"Saira Condensed";font-weight:800;font-size:2.8rem;line-height:1;color:var(--gold2)}
+.warn{min-height:1.3em;color:#ff9d7a;font-size:.88rem;margin-bottom:12px}
+.calc .btn{width:100%}
 
-/* support */
-.support{display:grid;grid-template-columns:1fr 1fr}
-.support > div{padding:90px 56px}
-.cash{background:var(--red)}
-.cash h2,.robux h2{font-size:clamp(2.8rem,5.5vw,4.6rem);margin-bottom:18px}
-.cash p{max-width:46ch}
-.amts{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0}
-.amts span{border:1px solid rgba(239,231,214,.45);padding:8px 14px;font-weight:700}
-.link{display:flex;gap:10px;align-items:center;margin-top:16px;font-size:.92rem;flex-wrap:wrap}
-.link code{font-family:inherit;background:rgba(0,0,0,.18);padding:5px 10px}
-.link button{background:none;border:1px solid rgba(239,231,214,.45);padding:5px 10px;font-size:.88rem}
-.fine{font-size:.88rem;opacity:.85;margin-top:22px;max-width:46ch}
-.robux{background:var(--ink2)}
-.robux .steps{margin:24px 0 28px}
+/* donasi */
+.don{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px;max-width:1100px}
+.don .card{padding:28px}
+.don h3{font-size:2rem}
+.amts{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.amts span{padding:7px 14px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--edge);font-weight:700;font-size:.9rem}
+.copy{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.88rem;color:var(--sub);flex-wrap:wrap}
+.copy button{padding:5px 12px;border-radius:7px;border:1px solid var(--edge);font-size:.82rem}
+.copy button:hover{background:rgba(255,255,255,.08)}
+.fine{margin-top:16px;font-size:.82rem;color:var(--sub)}
+.cash{background:linear-gradient(160deg,rgba(250,174,43,.18),rgba(12,16,34,.62) 60%)}
 
 /* faq */
-.faq{display:grid;grid-template-columns:1fr 1fr;gap:0 50px;margin-top:46px}
-details{border-top:1px solid var(--lineD);padding:4px 0}
-summary{cursor:pointer;list-style:none;padding:16px 30px 16px 0;font-weight:700;font-size:1.08rem;position:relative}
+.faq{max-width:860px;margin-top:24px;padding:8px 24px}
+details{border-bottom:1px solid var(--edge)}
+details:last-child{border:0}
+summary{list-style:none;cursor:pointer;padding:18px 34px 18px 0;font-weight:600;font-size:1.02rem;position:relative}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";position:absolute;right:0;top:12px;font-size:1.5rem;color:var(--red)}
-details[open] summary::after{content:"−"}
-details p{color:#4a4d60;padding-bottom:18px}
+summary::after{content:"+";position:absolute;right:4px;top:13px;font-size:1.5rem;color:var(--gold);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--sub);padding-bottom:18px;max-width:70ch}
 
-/* footer */
-footer{padding:80px 0 30px;overflow:hidden}
-.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
-.foot h4{font-size:.95rem;color:var(--gold);margin-bottom:12px;font-weight:700}
-.foot a{display:block;text-decoration:none;color:#c9c3b4;padding:3px 0}
-.foot a:hover{color:var(--paper)}
-.mega{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:clamp(3.5rem,21vw,19rem);line-height:.8;color:transparent;-webkit-text-stroke:1.5px rgba(200,160,74,.55);margin:70px 0 24px;white-space:nowrap;text-transform:uppercase}
-.legal{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--mute);font-size:.85rem;border-top:1px solid var(--line);padding-top:20px}
-.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,30px);opacity:0;background:var(--paper);color:var(--ink);font-weight:700;padding:10px 18px;transition:.25s;pointer-events:none;z-index:60}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;z-index:50;background:var(--gold);color:#1a1405;font-weight:700;padding:10px 18px;border-radius:10px;transition:.25s;pointer-events:none}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 
-@media (max-width:1000px){
-  .nav{position:absolute;top:62px;left:0;right:0;flex-direction:column;gap:0;background:var(--ink);border-bottom:1px solid var(--line);display:none}
-  .nav.open{display:flex}.nav a{padding:14px 20px;border-top:1px solid var(--line)}
-  .bar .btn{display:none}.burger{display:block}
-  .hero .top,.split,.maps,.rbx,.howto,.ranks,.foot{grid-template-columns:1fr}
-  .hero aside{padding-bottom:0}
-  .divs,.join{grid-template-columns:1fr 1fr;row-gap:34px}
-  .act{grid-template-columns:1fr;gap:6px}
-  .item{grid-template-columns:1fr auto;gap:8px 20px}.item p{grid-column:1/-1;grid-row:2}.item .k{grid-row:1;grid-column:2}.item .btn,.item .soon{grid-column:1/-1;justify-self:start}
-  .support{grid-template-columns:1fr}.support > div{padding:70px 24px}
-  .invite{grid-template-columns:1fr}
-  .faq{grid-template-columns:1fr}
+@media (max-width:1100px){
+  .tiles,.acts,.steps,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ranks{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .shopwrap,.rbxwrap{grid-template-columns:1fr}
+  .howbox{position:static}
 }
-@media (max-width:600px){
-  section{padding:70px 0}
-  .facts{grid-template-columns:1fr 1fr}.facts div:nth-child(2){border-right:0}.facts div:nth-child(3){padding-left:0}
-  .divs,.join{grid-template-columns:1fr}
-  .invite{padding:30px 22px}
-  .calc{padding:24px}
+@media (max-width:760px){
+  :root{--side:0px}
+  .side{top:auto;right:0;width:auto;height:calc(64px + env(safe-area-inset-bottom));flex-direction:row;padding:0 4px env(safe-area-inset-bottom);border-right:0;border-top:1px solid var(--edge)}
+  .crest,.side .dcb{display:none}
+  .menu{flex-direction:row;overflow-x:auto;gap:0;scrollbar-width:none}
+  .menu::-webkit-scrollbar{display:none}
+  .menu a{min-width:66px;flex:1;padding:9px 4px;font-size:.62rem}
+  .menu a svg{width:21px;height:21px}
+  .menu a.on::before{left:14px;right:14px;top:0;bottom:auto;width:auto;height:3px}
+  .stage{bottom:calc(64px + env(safe-area-inset-bottom))}
+  .top{padding:0 18px;height:60px}
+  .top .dc{display:none}
+  .page{inset:60px 0 0 0;padding:10px 18px 30px}
+  .bgs::after{background:linear-gradient(0deg,rgba(7,10,22,.97) 30%,rgba(7,10,22,.55) 100%)}
+  .ranks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .don,.g2{grid-template-columns:1fr}
+  .stats{gap:22px}
+  .pick{width:calc(50% - 7px)}
+  .pick .th{height:90px}
 }
+@media (max-width:460px){.tiles,.acts,.steps,.g4{grid-template-columns:1fr}.home h1{font-size:3.3rem}}
 </style>
 </head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-<linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4dfa6"/><stop offset=".5" stop-color="#c8a04a"/><stop offset="1" stop-color="#8a6420"/></linearGradient>
-<symbol id="mark" viewBox="0 0 100 100"><polygon points="50,5 89,27.5 89,72.5 50,95 11,72.5 11,27.5" fill="#0c1022" stroke="url(#gg)" stroke-width="6"/><path d="M43 22h14v19l17 31q2 6-4 6H30q-6 0-4-6l17-31z" fill="none" stroke="url(#gg)" stroke-width="4" stroke-linejoin="round"/><path d="M33 61q8-4 17 0t17 0l6 11q2 6-4 6H31q-6 0-4-6z" fill="url(#gg)"/></symbol>
+<linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e2a8"/><stop offset=".5" stop-color="#d8b25c"/><stop offset="1" stop-color="#8a6420"/></linearGradient>
+<symbol id="mark" viewBox="0 0 100 100"><polygon points="50,5 89,27.5 89,72.5 50,95 11,72.5 11,27.5" fill="#070a16" stroke="url(#gg)" stroke-width="6"/><path d="M43 22h14v19l17 31q2 6-4 6H30q-6 0-4-6l17-31z" fill="none" stroke="url(#gg)" stroke-width="4" stroke-linejoin="round"/><path d="M33 61q8-4 17 0t17 0l6 11q2 6-4 6H31q-6 0-4-6z" fill="url(#gg)"/></symbol>
 <symbol id="dc" viewBox="0 0 24 24"><path fill="currentColor" d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18 18 0 0 0-5.5 0L8.6 3a19.6 19.6 0 0 0-4.9 1.5C.6 9.1-.3 13.7.1 18.2a19.8 19.8 0 0 0 6 3l1.3-2.1-2-1 .5-.4a14 14 0 0 0 12.2 0l.5.4-2 1 1.3 2.1a19.7 19.7 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.8zM8.5 15.4c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4zm7 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4z"/></symbol>
+<symbol id="rbx" viewBox="0 0 24 24"><path fill="#d8b25c" d="M12 1.5l9.1 5.25v10.5L12 22.5l-9.1-5.25V6.75z"/><path fill="#070a16" d="M12 5.2l6 3.45v6.9L12 19l-6-3.45v-6.9z"/><path fill="#d8b25c" d="M9.6 9.3h4.8v5.4H9.6z"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h5v-6h4v6h5V10"/></symbol>
+<symbol id="i-tro" viewBox="0 0 24 24"><path d="M12 2l8 3.5v6c0 5-3.4 8.6-8 10.5-4.6-1.9-8-5.5-8-10.5v-6z"/><path d="M8.5 11.5l2.5 2.5 4.5-5"/></symbol>
+<symbol id="i-fams" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c.6-3.6 3.2-5.6 6.5-5.6s5.9 2 6.5 5.6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.6c2.9.1 4.9 1.8 5.5 4.6"/></symbol>
+<symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4L3 6.5v13.5l6-2.5 6 2.5 6-2.5V4l-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></symbol>
+<symbol id="i-shop" viewBox="0 0 24 24"><path d="M4 8h16l-1.3 11.2a2 2 0 0 1-2 1.8H7.3a2 2 0 0 1-2-1.8z"/><path d="M8.5 8V6.5a3.5 3.5 0 0 1 7 0V8"/></symbol>
+<symbol id="i-rbx" viewBox="0 0 24 24"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z"/><path d="M9.8 9.8h4.4v4.4H9.8z"/></symbol>
+<symbol id="i-don" viewBox="0 0 24 24"><path d="M12 20.5s-8-4.6-8-10.6A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8 2.9c0 6-8 10.6-8 10.6z"/></symbol>
+<symbol id="i-faq" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2.2-2.4 3.7"/><path d="M12 17.2v.1"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></symbol>
+<symbol id="i-gift" viewBox="0 0 24 24"><path d="M4 10h16v10H4zM3 7h18v3H3zM12 7v13"/><path d="M12 7c-1.5-3-5-3.5-5-1.2C7 7 9 7 12 7c3 0 5 0 5-1.2C17 3.5 13.5 4 12 7z"/></symbol>
+<symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></symbol>
+<symbol id="i-game" viewBox="0 0 24 24"><path d="M7 8h10a4 4 0 0 1 4 4.5l-.6 4a2.6 2.6 0 0 1-4.6 1.3L14 16h-4l-1.8 1.8a2.6 2.6 0 0 1-4.6-1.3l-.6-4A4 4 0 0 1 7 8z"/><path d="M8 11v3M6.5 12.5h3M15.5 12h.01M17.5 13.5h.01"/></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></symbol>
+<symbol id="i-pod" viewBox="0 0 24 24"><circle cx="12" cy="11" r="2.5"/><path d="M8.2 15a5.5 5.5 0 1 1 7.6 0M5.3 18a9.5 9.5 0 1 1 13.4 0"/></symbol>
+<symbol id="i-brush" viewBox="0 0 24 24"><path d="M14.5 4.5l5 5-8 8-5-5z"/><path d="M6.5 12.5L4 20l7.5-2.5"/></symbol>
+<symbol id="i-hand" viewBox="0 0 24 24"><path d="M3 12l4-4 3 1 3-3 4 1 4 5-6 6-5-1-3 2z"/><path d="M10 9l4 4"/></symbol>
+<symbol id="i-crown" viewBox="0 0 24 24"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/></symbol>
+<symbol id="i-light" viewBox="0 0 24 24"><path d="M12 3v4M5 6l2.5 2.5M19 6l-2.5 2.5"/><path d="M8 13a4 4 0 1 1 8 0c0 2-1.5 3-1.5 5h-5C9.5 16 8 15 8 13zM10 21h4"/></symbol>
 </defs></svg>
 
-<header class="bar"><div class="w">
-  <a class="logo" href="#top"><svg><use href="#mark"/></svg>TRO<span>.</span>LABS</a>
-  <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">Menu</button>
-  <nav class="nav" id="nav" aria-label="Menu">
-    <a href="#tentang">Tentang</a><a href="#fams">TRO Fams</a><a href="#map">Map</a><a href="#shop">Shop</a><a href="#robux">Robux</a><a href="#dukung">Dukung</a><a href="#faq">FAQ</a>
-  </nav>
-  <a class="btn dc sm" href="https://discord.gg/ju9yUjuzqm" target="_blank" rel="noopener"><svg><use href="#dc"/></svg>Discord</a>
-</div></header>
-
-<main id="top">
-<section class="hero"><div class="w top">
-  <h1 class="d">The<br>Resilient<em>Order</em></h1>
-  <aside>
-    <svg viewBox="0 0 100 100" role="img" aria-label="Logo TRO LABS"><use href="#mark"/></svg>
-    <p>Komunitas Roblox Indonesia. Kami nongkrong, joget, bikin event, dan merakit map serta script sendiri di TRO LABS.</p>
-    <div class="cta"><a class="btn solid" href="#fams">Gabung TRO Fams</a><a class="btn line" href="#shop">Shop</a></div>
-  </aside>
+<div class="bgs" aria-hidden="true">
+  <div data-bg="otr" style="background-image:url(https://tr.rbxcdn.com/180DAY-757a7c50298228c6ab82af2fcc73d4c9/768/432/Image/Png/noFilter)"></div>
+  <div data-bg="dance" style="background-image:url(https://tr.rbxcdn.com/180DAY-a5eeb550cebd28cad982a69fd63ac2de/768/432/Image/Png/noFilter)"></div>
+  <div data-bg="chill" style="background-image:url(https://tr.rbxcdn.com/180DAY-040d6d50abeee474f05762aea81ce7b5/768/432/Image/Png/noFilter)"></div>
+  <div data-bg="battle" style="background-image:url(https://tr.rbxcdn.com/180DAY-420aa96ae3fc81815b33537ab62598f0/768/432/Image/Png/noFilter)"></div>
+  <div data-bg="pull" style="background-image:url(https://tr.rbxcdn.com/180DAY-1a1e9186589e103abd3d7bbca1f28d3d/768/432/Image/Png/noFilter)"></div>
+  <div data-bg="tunnel" class="bg-tunnel"></div>
+  <div data-bg="gold" class="bg-gold"></div>
 </div>
-<div class="w"><div class="facts">
-  <div><b>2025</b><small>tahun berdiri</small></div>
-  <div><b>310+</b><small>warga di Discord</small></div>
-  <div><b>49K+</b><small>kunjungan map</small></div>
-  <div><b>4</b><small>divisi yang jalanin TRO</small></div>
-</div></div></section>
 
-<div class="ticker" aria-hidden="true"><div>
-  <span>On The Rugs</span><span>Tunnel</span><span>TRO Fams</span><span>Dance Night</span><span>TRO Labs Shop</span><span>Karaoke</span><span>Mabar</span><span>TROlley Robux</span>
-  <span>On The Rugs</span><span>Tunnel</span><span>TRO Fams</span><span>Dance Night</span><span>TRO Labs Shop</span><span>Karaoke</span><span>Mabar</span><span>TROlley Robux</span>
-</div></div>
-
-<section class="paper about" id="tentang"><div class="w">
-  <div class="split">
-    <h2 class="d">Siapa<br>kami</h2>
-    <div>
-      <p class="big">TRO lahir tahun 2025 dari sekumpulan anak Roblox yang pengen punya <b>tempat pulang</b>. Sekarang TRO punya ratusan warga, tim yang jelas, dan studio sendiri, <b>TRO LABS</b>, yang bikin map dan script dari nol.</p>
-      <p class="mute" style="margin-top:22px;max-width:52ch">Namanya diambil dari dua hal yang kami pegang: tetap solid walau lagi sepi (resilient), dan ada aturan yang bikin semua nyaman (order). Rules dibaca dulu ya sebelum ikut nongkrong.</p>
-    </div>
+<nav class="side" aria-label="Menu utama">
+  <a href="#home" aria-label="Home"><svg class="crest"><use href="#mark"/></svg></a>
+  <div class="menu">
+    <a href="#home" data-p="home"><svg><use href="#i-home"/></svg>Home</a>
+    <a href="#tro" data-p="tro"><svg><use href="#i-tro"/></svg>TRO</a>
+    <a href="#fams" data-p="fams"><svg><use href="#i-fams"/></svg>Fams</a>
+    <a href="#map" data-p="map"><svg><use href="#i-map"/></svg>Map</a>
+    <a href="#shop" data-p="shop"><svg><use href="#i-shop"/></svg>Shop</a>
+    <a href="#robux" data-p="robux"><svg><use href="#i-rbx"/></svg>Robux</a>
+    <a href="#donasi" data-p="donasi"><svg><use href="#i-don"/></svg>Donasi</a>
+    <a href="#faq" data-p="faq"><svg><use href="#i-faq"/></svg>FAQ</a>
   </div>
-  <div class="divs">
-    <div><h3 class="d">Management</h3><p>Pegang arah TRO, keputusan besar, dan koordinasi antar divisi.</p></div>
-    <div><h3 class="d">Creative</h3><p>Desain, poster event, konten video, dan semua visual TRO.</p></div>
-    <div><h3 class="d">Community</h3><p>Jaga suasana server, sambut warga baru, bikin event rutin.</p></div>
-    <div><h3 class="d">Partnership</h3><p>Kolaborasi dan undangan bareng fams atau komunitas lain.</p></div>
-  </div>
-</div></section>
+  <a class="dcb" href="https://discord.gg/ju9yUjuzqm" target="_blank" rel="noopener" aria-label="Discord TRO"><svg><use href="#dc"/></svg></a>
+</nav>
 
-<section id="fams"><div class="w">
-  <h2 class="d">TRO<br><span style="color:var(--gold)">Fams</span></h2>
-  <p class="lede mute" style="margin-top:24px">Fams artinya keluarga. Warga TRO bukan sekadar teman main, tapi orang-orang yang kamu cari tiap malam buat nongkrong.</p>
-  <div class="acts">
-    <div class="act"><h3 class="d">Dance night</h3><p>Joget bareng dan sync dance di ON THE RUGS atau TUNNEL sampai tengah malam.</p><small>Tiap minggu</small></div>
-    <div class="act"><h3 class="d">Mabar</h3><p>Main bareng game Roblox lain, dari obby, tycoon, sampai horor yang bikin teriak di voice.</p><small>Kapan aja</small></div>
-    <div class="act"><h3 class="d">Karaoke &amp; DJ</h3><p>Nyanyi di voice, request lagu, dan sesi DJ dari warga sendiri.</p><small>Malam minggu</small></div>
-    <div class="act"><h3 class="d">Podcast</h3><p>Cerita horor, ngobrol santai, giveaway, sampai rayain ulang tahun warga.</p><small>Diumumkan di Discord</small></div>
-  </div>
+<div class="stage">
+  <header class="top">
+    <span class="crumb">TRO.LABS / <b id="crumb">HOME</b></span>
+    <span class="online"><i></i>310+ warga di Discord</span>
+    <a class="btn dc sm" href="https://discord.gg/ju9yUjuzqm" target="_blank" rel="noopener"><svg><use href="#dc"/></svg>Join</a>
+  </header>
 
-  <ol class="join" aria-label="Cara jadi TRO MEMBER">
-    <li><b>01</b><strong>Masuk Discord</strong><span>Jawab pertanyaan onboarding, kamu langsung jadi tamu.</span></li>
-    <li><b>02</b><strong>Ikutin Server Guide</strong><span>Baca rules, ambil role, sapa warga di public chat.</span></li>
-    <li><b>03</b><strong>Ajukan diri</strong><span>Isi form TRO MEMBER di channel verifikasi.</span></li>
-    <li><b>04</b><strong>Di-ACC admin</strong><span>Dapat role TRO MEMBER dan akses channel khusus member.</span></li>
-  </ol>
-
-  <div class="ranks">
-    <h3 class="d">Jenjang<br>rank</h3>
-    <table><tbody>
-      <tr><td>Owner</td><td>Pendiri dan penanggung jawab TRO.</td></tr>
-      <tr><td>Lead &amp; Co Lead</td><td>Mimpin warga dan jalannya divisi.</td></tr>
-      <tr><td>Admin &amp; Guard</td><td>Jaga server, ACC member baru, bantu warga.</td></tr>
-      <tr><td>TRO Member</td><td>Anggota resmi yang sudah di-ACC.</td></tr>
-      <tr><td>Tamu</td><td>Warga baru yang sudah lewat onboarding.</td></tr>
-    </tbody></table>
-  </div>
-
-  <div class="invite">
-    <div><h3 class="d">Undang TRO ke event kamu</h3><p>Punya fams dan mau bikin acara bareng? Buka tiket di Discord TRO, kasih tanggal, jam, map, dan dress code. Divisi Partnership yang atur jadwalnya.</p></div>
-    <a class="btn line" href="https://discord.gg/ju9yUjuzqm" target="_blank" rel="noopener">Buka tiket</a>
-  </div>
-</div></section>
-
-<section class="paper" id="map" style="background:var(--paper2)"><div class="w">
-  <h2 class="d">Map<br>kami</h2>
-  <div class="maps">
-    <a class="mapc" href="https://www.roblox.com/games/97421109127420" target="_blank" rel="noopener">
-      <div class="shot"><img src="https://tr.rbxcdn.com/180DAY-757a7c50298228c6ab82af2fcc73d4c9/768/432/Image/Png/noFilter" alt="Azzy, maskot ON THE RUGS" loading="lazy"></div>
-      <div class="strip">
-        <img src="https://tr.rbxcdn.com/180DAY-420aa96ae3fc81815b33537ab62598f0/768/432/Image/Png/noFilter" alt="Dance battle di ON THE RUGS" loading="lazy">
-        <img src="https://tr.rbxcdn.com/180DAY-040d6d50abeee474f05762aea81ce7b5/768/432/Image/Png/noFilter" alt="Chill vibe hangout" loading="lazy">
-        <img src="https://tr.rbxcdn.com/180DAY-a5eeb550cebd28cad982a69fd63ac2de/768/432/Image/Png/noFilter" alt="Dance sync" loading="lazy">
+  <!-- HOME -->
+  <section class="page home" id="p-home" data-bg="otr" data-name="Home">
+    <div class="hero">
+      <span class="kick">Komunitas Roblox Indonesia · Est. 2025</span>
+      <h1 class="h">The Resilient<span>Order</span></h1>
+      <p>Tempat nongkrong, joget, dan mabar tiap malam. Kami juga bikin map dan script sendiri lewat studio TRO LABS.</p>
+      <div class="row">
+        <a class="btn play" href="https://www.roblox.com/games/97421109127420" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12-7.5z"/></svg>Main On The Rugs</a>
+        <a class="btn ghost" href="https://discord.gg/ju9yUjuzqm" target="_blank" rel="noopener"><svg><use href="#dc"/></svg>Gabung Discord</a>
       </div>
-      <h3 class="d">On The Rugs</h3>
-      <p>Club dansa R&amp;B dan hip-hop, ditemenin Azzy si hantu karpet. Ratusan dance, sync bareng teman, dance battle 1v1, dan DJ deck.</p>
-      <div class="tags"><span>46K+ visit</span><span>Dance sync</span><span>Dance battle</span><span>DJ deck</span></div>
-      <span class="btn" style="background:var(--ink);color:var(--paper);border-color:var(--ink)">Main di Roblox</span>
-    </a>
-    <a class="mapc" href="https://www.roblox.com/games/124479883430266" target="_blank" rel="noopener">
-      <div class="shot tunnel" aria-hidden="true">
-        <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice">
-          <rect width="640" height="360" fill="#0b0716"/>
-          <g fill="none" stroke-linecap="round">
-            <path d="M40 360V170a280 160 0 0 1 560 0v190" stroke="#3d2a7a" stroke-width="14"/>
-            <path d="M120 360V190a200 120 0 0 1 400 0v170" stroke="#5a37b8" stroke-width="10"/>
-            <path d="M190 360V205a130 82 0 0 1 260 0v155" stroke="#7d4cff" stroke-width="7"/>
-            <path d="M245 360V218a75 50 0 0 1 150 0v142" stroke="#b26bff" stroke-width="5"/>
-            <path d="M285 360V228a35 26 0 0 1 70 0v132" stroke="#e9cf8f" stroke-width="3"/>
-          </g>
-          <g stroke="#ff4fa3" stroke-width="2" opacity=".7"><path d="M320 120L80 360"/><path d="M320 120L560 360"/><path d="M320 120L230 360"/><path d="M320 120L410 360"/></g>
-          <rect y="300" width="640" height="60" fill="#0b0716" opacity=".55"/>
-        </svg>
+      <div class="stats">
+        <div><b>310+</b><small>Warga</small></div>
+        <div><b>49K+</b><small>Kunjungan map</small></div>
+        <div><b>2</b><small>Map aktif</small></div>
+        <div><b>4</b><small>Divisi</small></div>
       </div>
-      <h3 class="d">Tunnel</h3>
-      <p>Klub dansa di dalam terowongan beton. Joget bareng, dengerin DJ, dan nikmatin show lampu kayak konser.</p>
-      <div class="tags"><span>Light show</span><span>DJ</span><span>Hangout</span></div>
-      <span class="btn" style="background:var(--ink);color:var(--paper);border-color:var(--ink)">Main di Roblox</span>
-    </a>
-  </div>
-</div></section>
-
-<section class="paper" id="shop"><div class="w">
-  <div class="split" style="align-items:end">
-    <h2 class="d">TRO Labs<br><span style="color:var(--red)">Shop</span></h2>
-    <p class="mute lede">Script dan asset Roblox yang kami bikin buat map sendiri, sekarang bisa kamu pakai di map kamu. Bayar pakai DANA atau Robux, order lewat tiket di Discord TRO LABS.</p>
-  </div>
-  <div class="tabs" role="tablist" aria-label="Kategori">
-    <button class="on" data-f="all" role="tab">Semua</button><button data-f="script" role="tab">Script</button><button data-f="asset" role="tab">Asset</button><button data-f="free" role="tab">Gratis</button>
-  </div>
-  <ul class="items" id="items"></ul>
-  <div class="howto">
-    <div>
-      <h3 class="d" style="font-size:2.6rem;margin-bottom:14px">Cara order</h3>
-      <ol>
-        <li><span><strong>Masuk Discord TRO LABS</strong>Buka channel order-script, klik Order Script.</span></li>
-        <li><span><strong>Isi form</strong>Nama script, bayar pakai DANA atau Robux, username Roblox.</span></li>
-        <li><span><strong>Bayar dan kirim bukti</strong>Staff kirim harga di tiket, kamu kirim screenshot bukti.</span></li>
-        <li><span><strong>Terima script</strong>Dikirim di tiket, plus role CLIENT dan support bug fix.</span></li>
-      </ol>
     </div>
-    <div class="rules">
-      <h3 class="d">Aturan pakai</h3>
-      <p>Script cuma buat map kamu sendiri. Dilarang jual ulang, bagi-bagi, atau hapus credit TRO TEAM di dalam script. Kalau dilanggar, akses support dicabut.</p>
-      <a class="btn dc" href="https://discord.gg/rMkcztxv3s" target="_blank" rel="noopener"><svg><use href="#dc"/></svg>Buka Discord TRO LABS</a>
+    <div class="tiles">
+      <a class="tile glass" href="#fams"><svg class="ic"><use href="#i-fams"/></svg><span class="go">›</span><b>TRO Fams</b><small>Cara jadi member</small></a>
+      <a class="tile glass" href="#shop"><svg class="ic"><use href="#i-shop"/></svg><span class="go">›</span><b>Shop</b><small>Script & asset TRO LABS</small></a>
+      <a class="tile glass" href="#robux"><svg class="ic"><use href="#i-rbx"/></svg><span class="go">›</span><b>TROlley Robux</b><small>Rp157rb / 1.000 R$</small></a>
+      <a class="tile glass" href="#donasi"><svg class="ic"><use href="#i-don"/></svg><span class="go">›</span><b>Donasi</b><small>Saweria & Robux</small></a>
     </div>
-  </div>
-</div></section>
+  </section>
 
-<section id="robux"><div class="w">
-  <h2 class="d">TROlley<br><span style="color:var(--gold)">Robux</span></h2>
-  <div class="rbx">
-    <div class="calc">
-      <p class="mute">Rp157.000 per 1.000 Robux, minimal 100. Dikirim lewat komunitas Roblox TRO langsung ke username kamu.</p>
-      <div class="pk" id="pk"></div>
-      <label class="inp"><input id="rbx" type="number" inputmode="numeric" min="100" step="50" value="1000" aria-label="Jumlah Robux"><span>Robux</span></label>
-      <div class="sum"><span class="mute">Total bayar via DANA</span><b id="tot">Rp157.000</b></div>
-      <div class="warn" id="warn"></div>
-      <a class="btn dc" href="https://discord.gg/ju9yUjuzqm" target="_blank" rel="noopener" style="margin-top:10px"><svg><use href="#dc"/></svg>Order di Discord TRO</a>
+  <!-- TRO -->
+  <section class="page" id="p-tro" data-bg="chill" data-name="Tentang TRO">
+    <span class="kick">Tentang kami</span>
+    <h1 class="h title">Apa itu TRO?</h1>
+    <p class="lead">TRO lahir tahun 2025 dari sekumpulan anak Roblox yang pengen punya tempat pulang. Sekarang TRO punya ratusan warga, tim yang jelas, dan studio sendiri, TRO LABS, yang bikin map dan script dari nol.</p>
+    <div class="sec"><h2>Arti nama</h2>
+      <div class="g2">
+        <div class="card glass"><h3>Resilient</h3><p>Tetap solid walau server lagi sepi. Warga TRO saling jaga dan saling ajak.</p></div>
+        <div class="card glass"><h3>Order</h3><p>Ada aturan yang bikin semua nyaman. Rules dibaca dulu sebelum ikut nongkrong.</p></div>
+      </div>
     </div>
-    <ol class="steps">
-      <li><span><strong>Buka tiket order</strong>Di Discord TRO, channel TROlley, klik Order.</span></li>
-      <li><span><strong>Isi data</strong>Jumlah Robux, username Roblox, nama dan nomor DANA kamu.</span></li>
-      <li><span><strong>Join komunitas TRO - TEAM</strong>Wajib, karena Robux dikirim lewat payout komunitas.</span></li>
-      <li><span><strong>Bayar dan kirim bukti</strong>Scan QR DANA di tiket, kirim screenshot transfer.</span></li>
-      <li><span><strong>Robux masuk</strong>Tanpa login, tanpa kasih password. Stok terbatas, cek di Discord.</span></li>
-    </ol>
-  </div>
-</div></section>
+    <div class="sec"><h2>Divisi</h2>
+      <div class="g4">
+        <div class="card glass"><svg class="ic"><use href="#i-crown"/></svg><h3>Management</h3><p>Pegang arah TRO, keputusan besar, dan koordinasi antar divisi.</p></div>
+        <div class="card glass"><svg class="ic"><use href="#i-brush"/></svg><h3>Creative</h3><p>Desain, poster event, konten video, dan semua visual TRO.</p></div>
+        <div class="card glass"><svg class="ic"><use href="#i-fams"/></svg><h3>Community</h3><p>Jaga suasana server, sambut warga baru, bikin event rutin.</p></div>
+        <div class="card glass"><svg class="ic"><use href="#i-hand"/></svg><h3>Partnership</h3><p>Kolaborasi dan undangan bareng fams atau komunitas lain.</p></div>
+      </div>
+    </div>
+    <div class="sec"><h2>TRO LABS</h2>
+      <div class="banner glass"><div><h3>Studio milik TRO</h3><p>Semua map dan script TRO dibikin di sini. Sekarang script-nya juga bisa kamu beli buat map kamu sendiri.</p></div><a class="btn play sm" href="#shop">Lihat shop</a></div>
+    </div>
+  </section>
 
-<section class="support" id="dukung" style="padding:0">
-  <div class="cash">
-    <h2 class="d">Donasi<br>cash</h2>
-    <p>Server, musik, dan update map jalan terus karena kalian. Donasi rupiah lewat Saweria, bisa pakai QRIS, GoPay, OVO, DANA, ShopeePay, atau transfer bank.</p>
-    <div class="amts"><span>Rp5.000</span><span>Rp10.000</span><span>Rp25.000</span><span>Rp50.000</span></div>
-    <a class="btn line" href="https://saweria.co/trofamily" target="_blank" rel="noopener">Donasi lewat Saweria</a>
-    <div class="link">saweria.co/trofamily <button type="button" data-copy="https://saweria.co/trofamily">Salin link</button></div>
-    <p class="fine">Donasi sifatnya sukarela dan tidak memberi item, title, atau keuntungan apa pun di dalam game.</p>
-  </div>
-  <div class="robux">
-    <h2 class="d">Donasi<br>Robux</h2>
-    <p style="color:#c9c3b4;max-width:46ch">Lewat sistem resmi Roblox, langsung di dalam map. Nama kamu masuk papan Top Donatur.</p>
-    <ol class="steps">
-      <li><span><strong>Masuk map</strong>ON THE RUGS atau TUNNEL.</span></li>
-      <li><span><strong>Buka menu Donate</strong>Di pojok layar, atau datangi papan donasi.</span></li>
-      <li><span><strong>Pilih nominal</strong>Konfirmasi pembelian di Roblox.</span></li>
-    </ol>
-    <a class="btn solid" href="https://www.roblox.com/games/97421109127420" target="_blank" rel="noopener">Buka ON THE RUGS</a>
-  </div>
-</section>
+  <!-- FAMS -->
+  <section class="page" id="p-fams" data-bg="dance" data-name="TRO Fams">
+    <span class="kick">Keluarga TRO</span>
+    <h1 class="h title">TRO Fams</h1>
+    <p class="lead">Warga TRO bukan sekadar teman main. Ini orang-orang yang kamu cari tiap malam buat nongkrong.</p>
+    <div class="sec"><h2>Kegiatan</h2>
+      <div class="acts">
+        <div class="card glass"><svg class="ic"><use href="#i-music"/></svg><h3>Dance night</h3><p>Joget dan sync dance di ON THE RUGS atau TUNNEL sampai tengah malam.</p><small>Tiap minggu</small></div>
+        <div class="card glass"><svg class="ic"><use href="#i-game"/></svg><h3>Mabar</h3><p>Main bareng game Roblox lain, dari obby, tycoon, sampai horor.</p><small>Kapan aja</small></div>
+        <div class="card glass"><svg class="ic"><use href="#i-mic"/></svg><h3>Karaoke & DJ</h3><p>Nyanyi di voice, request lagu, dan sesi DJ dari warga sendiri.</p><small>Malam minggu</small></div>
+        <div class="card glass"><svg class="ic"><use href="#i-pod"/></svg><h3>Podcast</h3><p>Cerita horor, ngobrol santai, giveaway, rayain ulang tahun warga.</p><small>Info di Discord</small></div>
+      </div>
+    </div>
+    <div class="sec"><h2>Cara jadi TRO Member</h2>
+      <div class="steps">
+        <div class="card glass"><h3>Masuk Discord</h3><p>Jawab pertanyaan onboarding, kamu langsung jadi tamu.</p></div>
+        <div class="card glass"><h3>Ikutin guide</h3><p>Baca rules, ambil role, sapa warga di public chat.</p></div>
+        <div class="card glass"><h3>Ajukan diri</h3><p>Isi form TRO MEMBER di channel verifikasi.</p></div>
+        <div class="card glass"><h3>Di-ACC admin</h3><p>Dapat role TRO MEMBER dan akses channel khusus member.</p></div>
+      </div>
+    </div>
+    <div class="sec"><h2>Rank</h2>
+      <div class="ranks" id="ranks"></div>
+      <div class="banner glass"><div><h3>Undang TRO ke event kamu</h3><p>Buka tiket di Discord TRO, kasih tanggal, jam, map, dan dress code. Divisi Partnership yang atur.</p></div><a class="btn dc sm" href="https://discord.gg/ju9yUjuzqm" target="_blank" rel="noopener"><svg><use href="#dc"/></svg>Buka tiket</a></div>
+    </div>
+  </section>
 
-<section class="paper" id="faq"><div class="w">
-  <h2 class="d">Yang sering<br>ditanya</h2>
-  <div class="faq">
-    <div>
+  <!-- MAP -->
+  <section class="page mapv" id="p-map" data-bg="otr" data-name="Map">
+    <div class="mapinfo" id="mapinfo"></div>
+    <div class="picker" id="picker"></div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="page" id="p-shop" data-bg="gold" data-name="Shop">
+    <span class="kick">TRO LABS Store</span>
+    <h1 class="h title">Shop</h1>
+    <p class="lead">Script dan asset Roblox yang kami pakai di map sendiri. Bayar pakai DANA atau Robux, order lewat tiket di Discord TRO LABS.</p>
+    <div class="shopwrap">
+      <div>
+        <div class="filters" id="filters">
+          <button class="on" data-f="all">Semua</button><button data-f="script">Script</button><button data-f="asset">Asset</button><button data-f="free">Gratis</button>
+        </div>
+        <div class="items" id="items"></div>
+      </div>
+      <aside class="howbox glass" style="margin-top:22px">
+        <h3>Cara order</h3>
+        <ol class="ol">
+          <li><span><b>Masuk Discord TRO LABS</b>Buka channel order-script, klik Order Script.</span></li>
+          <li><span><b>Isi form</b>Nama script, metode bayar, username Roblox.</span></li>
+          <li><span><b>Bayar & kirim bukti</b>Staff kirim harga di tiket, kamu kirim screenshot.</span></li>
+          <li><span><b>Terima script</b>Dikirim di tiket, plus role CLIENT dan support bug fix.</span></li>
+        </ol>
+        <div class="note">Script cuma buat map kamu sendiri. Dilarang jual ulang, bagi-bagi, atau hapus credit TRO TEAM.</div>
+        <a class="btn dc" style="width:100%" href="https://discord.gg/rMkcztxv3s" target="_blank" rel="noopener"><svg><use href="#dc"/></svg>Discord TRO LABS</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ROBUX -->
+  <section class="page" id="p-robux" data-bg="pull" data-name="TROlley Robux">
+    <span class="kick">Top up Robux</span>
+    <h1 class="h title">TROlley Robux</h1>
+    <p class="lead">Rp157.000 per 1.000 Robux, minimal 100. Dikirim lewat payout komunitas Roblox TRO - TEAM, tanpa login dan tanpa kasih password.</p>
+    <div class="rbxwrap">
+      <div class="calc glass">
+        <div class="pk" id="pk"></div>
+        <label class="inp"><svg><use href="#rbx"/></svg><input id="rbxIn" type="number" inputmode="numeric" min="100" step="50" value="1000" aria-label="Jumlah Robux"><span>Robux</span></label>
+        <div class="total"><small>Total bayar via DANA</small><b id="tot">Rp157.000</b></div>
+        <div class="warn" id="warn"></div>
+        <a class="btn play" href="https://discord.gg/ju9yUjuzqm" target="_blank" rel="noopener">Order di Discord TRO</a>
+      </div>
+      <div class="card glass">
+        <h3>Cara order</h3>
+        <ol class="ol">
+          <li><span><b>Buka tiket order</b>Di Discord TRO, channel TROlley, klik Order.</span></li>
+          <li><span><b>Isi data</b>Jumlah Robux, username Roblox, nama dan nomor DANA.</span></li>
+          <li><span><b>Join komunitas TRO - TEAM</b>Wajib, karena Robux dikirim lewat payout komunitas.</span></li>
+          <li><span><b>Bayar & kirim bukti</b>Scan QR DANA di tiket, kirim screenshot transfer.</span></li>
+          <li><span><b>Robux masuk</b>Stok terbatas, cek ketersediaan di Discord.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONASI -->
+  <section class="page" id="p-donasi" data-bg="battle" data-name="Donasi">
+    <span class="kick">Support TRO</span>
+    <h1 class="h title">Donasi</h1>
+    <p class="lead">Server, musik, dan update map jalan terus karena kalian. Pilih cara yang paling enak buat kamu.</p>
+    <div class="don">
+      <div class="card glass cash">
+        <svg class="ic"><use href="#i-don"/></svg>
+        <h3>Donasi cash</h3>
+        <p>Lewat Saweria. Bisa pakai QRIS, GoPay, OVO, DANA, ShopeePay, atau transfer bank.</p>
+        <div class="amts"><span>Rp5.000</span><span>Rp10.000</span><span>Rp25.000</span><span>Rp50.000</span></div>
+        <a class="btn play" href="https://saweria.co/trofamily" target="_blank" rel="noopener">Donasi lewat Saweria</a>
+        <div class="copy">saweria.co/trofamily <button type="button" data-copy="https://saweria.co/trofamily">Salin link</button></div>
+        <p class="fine">Donasi sukarela dan tidak memberi item, title, atau keuntungan apa pun di dalam game.</p>
+      </div>
+      <div class="card glass">
+        <svg class="ic"><use href="#i-rbx"/></svg>
+        <h3>Donasi Robux</h3>
+        <p>Lewat sistem resmi Roblox, langsung di dalam map. Nama kamu masuk papan Top Donatur.</p>
+        <ol class="ol" style="margin:16px 0 20px">
+          <li><span><b>Masuk map</b>ON THE RUGS atau TUNNEL.</span></li>
+          <li><span><b>Buka menu Donate</b>Di pojok layar, atau datangi papan donasi.</span></li>
+          <li><span><b>Pilih nominal</b>Konfirmasi pembelian di Roblox.</span></li>
+        </ol>
+        <a class="btn ghost" href="https://www.roblox.com/games/97421109127420" target="_blank" rel="noopener">Buka ON THE RUGS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="page" id="p-faq" data-bg="chill" data-name="FAQ">
+    <span class="kick">Bantuan</span>
+    <h1 class="h title">FAQ</h1>
+    <div class="faq glass">
       <details><summary>Gimana cara gabung TRO?</summary><p>Masuk Discord TRO lalu jawab pertanyaan onboarding, kamu langsung jadi tamu. Mau jadi TRO MEMBER? Ajukan di channel verifikasi dan tunggu ACC admin.</p></details>
       <details><summary>Bedanya TRO dan TRO LABS?</summary><p>TRO itu komunitasnya. TRO LABS itu studionya, yang bikin map dan script, dan punya Discord sendiri khusus jual beli script.</p></details>
       <details><summary>Beli Robux di TROlley aman?</summary><p>Robux dikirim lewat payout komunitas Roblox ke username kamu, jadi kamu nggak perlu kasih password. Pastikan sudah join komunitas TRO - TEAM sebelum order.</p></details>
-      <details><summary>Berapa lama order diproses?</summary><p>Begitu bukti bayar dicek dan di-ACC, tim TRO langsung proses. Status order bisa dipantau di tiket Discord kamu.</p></details>
-    </div>
-    <div>
+      <details><summary>Berapa lama order diproses?</summary><p>Begitu bukti bayar dicek dan di-ACC, tim langsung proses. Status order bisa dipantau di tiket Discord kamu.</p></details>
       <details><summary>Boleh jual ulang script TRO LABS?</summary><p>Nggak boleh. Script cuma buat map kamu sendiri, dan credit TRO TEAM wajib tetap ada.</p></details>
       <details><summary>Kalau donasi dapat apa di game?</summary><p>Donasi cash di Saweria sifatnya sukarela dan tidak memberi item di game. Donasi Robux di dalam map bikin nama kamu masuk papan Top Donatur.</p></details>
       <details><summary>Mau undang TRO ke event fams kami?</summary><p>Buka tiket di Discord TRO dan pilih undangan atau kolaborasi. Divisi Partnership bakal hubungi kamu.</p></details>
       <details><summary>Map TRO ada berapa?</summary><p>Sekarang ON THE RUGS dan TUNNEL. Map baru selalu diumumkan duluan di Discord.</p></details>
     </div>
-  </div>
-</div></section>
-</main>
-
-<footer><div class="w">
-  <div class="foot">
-    <div><a class="logo" href="#top"><svg><use href="#mark"/></svg>TRO<span>.</span>LABS</a><p class="mute" style="margin-top:14px;max-width:38ch">Rumah resmi The Resilient Order. Komunitas, map, shop, dan semua tentang TRO.</p></div>
-    <div><h4>Jelajahi</h4><a href="#tentang">Tentang</a><a href="#fams">TRO Fams</a><a href="#map">Map</a><a href="#shop">Shop</a><a href="#robux">Robux</a></div>
-    <div><h4>Komunitas</h4><a href="https://discord.gg/ju9yUjuzqm" target="_blank" rel="noopener">Discord TRO</a><a href="https://discord.gg/rMkcztxv3s" target="_blank" rel="noopener">Discord TRO LABS</a><a href="https://www.roblox.com/communities/901582211" target="_blank" rel="noopener">Komunitas Roblox</a><a href="https://saweria.co/trofamily" target="_blank" rel="noopener">Saweria</a></div>
-  </div>
-  <div class="mega" aria-hidden="true">TRO.LABS</div>
-  <div class="legal"><span>© <span id="yr"></span> TRO.LABS, The Resilient Order</span><span>Bukan situs resmi Roblox Corporation</span></div>
-</div></footer>
+  </section>
+</div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-$('#yr').textContent=new Date().getFullYear();
+const RB='https://tr.rbxcdn.com/180DAY-',SZ='/768/432/Image/Png/noFilter';
+
+/* ranks */
+const RANKS=[['Owner','Pendiri TRO','#f3d98f'],['Lead & Co Lead','Mimpin warga & divisi','#d8b25c'],['Admin & Guard','Jaga server, ACC member','#9fb3ff'],['TRO Member','Anggota resmi','#7fe0b0'],['Tamu','Warga baru','#a5abc2']];
+$('#ranks').innerHTML=RANKS.map(([n,d,c],i)=>`<div class="rank glass"><svg class="badge" viewBox="0 0 60 60"><polygon points="30,3 55,17 55,43 30,57 5,43 5,17" fill="${c}22" stroke="${c}" stroke-width="2.5"/>${'<path d="M22 38l8-4 8 4" fill="none" stroke="'+c+'" stroke-width="3" stroke-linecap="round"/>'.repeat(1)}${Array.from({length:5-i},(_,k)=>`<circle cx="${30+(k-(4-i)/2)*6}" cy="24" r="2.2" fill="${c}"/>`).join('')}</svg><b>${n.replace(/&/g,'&amp;')}</b><small>${d}</small></div>`).join('');
+
+/* maps */
+const MAPS=[
+ {k:'otr',bg:'otr',name:'On The Rugs',th:RB+'757a7c50298228c6ab82af2fcc73d4c9'+SZ,sub:'Club dansa R&B & hip-hop',desc:'Ditemenin Azzy si hantu karpet. Ratusan dance, sync bareng teman, dance battle 1v1, dan DJ deck.',tags:['Dance sync','Dance battle','DJ deck','Donasi Robux'],stats:[['46K+','Kunjungan'],['R15','Avatar'],['Aktif','Status']],url:'https://www.roblox.com/games/97421109127420'},
+ {k:'tunnel',bg:'tunnel',name:'Tunnel',th:'',sub:'Klub di dalam terowongan',desc:'Klub dansa di dalam terowongan beton. Joget bareng, dengerin DJ, dan nikmatin light show kayak konser.',tags:['Light show','DJ','Hangout'],stats:[['Baru','Rilis'],['R15','Avatar'],['Aktif','Status']],url:'https://www.roblox.com/games/124479883430266'}
+];
+let curMap='otr';
+const drawMap=()=>{const m=MAPS.find(x=>x.k===curMap);
+ $('#mapinfo').innerHTML=`<span class="kick">${m.sub}</span><h1 class="h">${m.name}</h1><p>${m.desc}</p><div class="chips">${m.tags.map(t=>`<span>${t}</span>`).join('')}</div><div class="mstat">${m.stats.map(([b,s])=>`<div><b>${b}</b><small>${s}</small></div>`).join('')}</div><a class="btn play" href="${m.url}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12-7.5z"/></svg>Play</a>`;
+ $('#picker').innerHTML=MAPS.map(x=>`<button class="pick glass${x.k===curMap?' on':''}" data-m="${x.k}"><div class="th ${x.th?'':'bg-tunnel'}" ${x.th?`style="background-image:url(${x.th})"`:''}></div><div><b>${x.name}</b><small>${x.sub}</small></div></button>`).join('');
+ $('#p-map').dataset.bg=m.bg;setBg(m.bg);
+ $$('.pick').forEach(b=>b.onclick=()=>{curMap=b.dataset.m;drawMap();});};
+
+/* shop */
 const ITEMS=[
- ['script','Dance Sync System','Ratusan emote dance, sync ke teman, dan UI dance yang rapi. Dipakai di ON THE RUGS.'],
- ['script','Donation Board','Tiga papan: donatur harian, all-time dengan podium top 3, dan pesan donatur live antar server.'],
- ['script','Role & Leaderboard','Role Owner, Admin, VIP, VVIP, top donatur, dan section teman lengkap dengan badge.'],
- ['script','Dance Battle 1v1','Duel joget dua pemain, penonton yang pilih pemenangnya.'],
- ['script','HUD Pack','Jam, minimap, full map, teleport, free cam, siklus siang-malam, dan setting grafis.'],
- ['script','Loading Screen','Loading screen bermerek dengan animasi logo, tips, dan transisi masuk.'],
- ['script','Donation Popup','Popup animasi tiap ada donasi: nama donatur, jumlah Robux, efek masuk.'],
- ['script','Stage Light & Laser','Lampu panggung dan laser yang ikut beat musik buat map club.'],
- ['asset','Club Furniture Pack','Sofa, bar, DJ booth, dan dekor club 3D dengan material PBR.',1],
- ['asset','PBR Material Pack','Bata, aspal, beton, kayu, besi, dan kulit buat map realistis.',1],
- ['free','Script gratis','Script kecil gratis dari TRO LABS, ambil di forum free-script.']
+ ['script','Dance Sync System','Ratusan emote dance, sync ke teman, dan UI dance rapi. Dipakai di ON THE RUGS.','i-music'],
+ ['script','Donation Board','Papan donatur harian, all-time dengan podium top 3, dan pesan donatur live.','i-crown'],
+ ['script','Role & Leaderboard','Role Owner, Admin, VIP, VVIP, top donatur, dan section teman dengan badge.','i-tro'],
+ ['script','Dance Battle 1v1','Duel joget dua pemain, penonton yang pilih pemenangnya.','i-game'],
+ ['script','HUD Pack','Jam, minimap, full map, teleport, free cam, siang-malam, setting grafis.','i-map'],
+ ['script','Loading Screen','Loading screen bermerek dengan animasi logo, tips, dan transisi masuk.','i-code'],
+ ['script','Donation Popup','Popup animasi tiap ada donasi: nama donatur, jumlah Robux, efek masuk.','i-don'],
+ ['script','Stage Light & Laser','Lampu panggung dan laser yang ikut beat musik buat map club.','i-light'],
+ ['asset','Club Furniture Pack','Sofa, bar, DJ booth, dan dekor club 3D dengan material PBR.','i-box',1],
+ ['asset','PBR Material Pack','Bata, aspal, beton, kayu, besi, dan kulit buat map realistis.','i-box',1],
+ ['free','Script gratis','Script kecil gratis dari TRO LABS, ambil di forum free-script.','i-gift']
 ];
 const LBL={script:'Script',asset:'Asset',free:'Gratis'};
-const draw=f=>{$('#items').innerHTML=ITEMS.filter(i=>f==='all'||i[0]===f).map(([t,n,d,soon])=>`<li class="item"><h3 class="d">${n.replace(/&/g,'&amp;')}</h3><p>${d}</p><span class="k">${LBL[t]}</span>${soon?'<span class="soon">Segera hadir</span>':`<a class="btn line sm" href="https://discord.gg/rMkcztxv3s" target="_blank" rel="noopener">${t==='free'?'Ambil':'Order'}</a>`}</li>`).join('');};
-draw('all');
-$$('.tabs button').forEach(b=>b.addEventListener('click',()=>{$$('.tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');draw(b.dataset.f);}));
+const drawShop=f=>{$('#items').innerHTML=ITEMS.filter(i=>f==='all'||i[0]===f).map(([t,n,d,ic,soon])=>`<div class="item glass"><div class="art"><span class="tag">${LBL[t]}</span><svg><use href="#${ic}"/></svg></div><div class="bd"><h3>${n.replace(/&/g,'&amp;')}</h3><p>${d}</p>${soon?'<div class="soon">Segera hadir</div>':`<a class="btn ${t==='free'?'ghost':'play'} sm" href="https://discord.gg/rMkcztxv3s" target="_blank" rel="noopener">${t==='free'?'Ambil gratis':'Order'}</a>`}</div></div>`).join('');};
+drawShop('all');
+$$('#filters button').forEach(b=>b.onclick=()=>{$$('#filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');drawShop(b.dataset.f);});
+
+/* robux */
 const RATE=157,MIN=100,rp=n=>'Rp'+Math.round(n).toLocaleString('id-ID');
-$('#pk').innerHTML=[100,250,500,1000,2000,3000].map(r=>`<button type="button" data-r="${r}">${r.toLocaleString('id-ID')}<small>${rp(r*RATE)}</small></button>`).join('');
-const calc=()=>{const r=Math.max(0,Math.floor(+$('#rbx').value||0));$('#tot').textContent=rp(r*RATE);$('#warn').textContent=r<MIN?`Minimal order ${MIN} Robux.`:'';$$('#pk button').forEach(b=>b.classList.toggle('on',+b.dataset.r===r));};
-$$('#pk button').forEach(b=>b.addEventListener('click',()=>{$('#rbx').value=b.dataset.r;calc();}));
-$('#rbx').addEventListener('input',calc);calc();
-const bg=$('#burger'),nv=$('#nav');
-bg.addEventListener('click',()=>{const o=nv.classList.toggle('open');bg.setAttribute('aria-expanded',o);});
-nv.addEventListener('click',e=>{if(e.target.tagName==='A'){nv.classList.remove('open');bg.setAttribute('aria-expanded',false);}});
+$('#pk').innerHTML=[100,250,500,1000,2000,3000].map(r=>`<button type="button" data-r="${r}">${r.toLocaleString('id-ID')} R$<small>${rp(r*RATE)}</small></button>`).join('');
+const calc=()=>{const r=Math.max(0,Math.floor(+$('#rbxIn').value||0));$('#tot').textContent=rp(r*RATE);$('#warn').textContent=r<MIN?`Minimal order ${MIN} Robux.`:'';$$('#pk button').forEach(b=>b.classList.toggle('on',+b.dataset.r===r));};
+$$('#pk button').forEach(b=>b.onclick=()=>{$('#rbxIn').value=b.dataset.r;calc();});
+$('#rbxIn').addEventListener('input',calc);calc();
+
+/* copy */
 const t=$('#toast');
-$$('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);t.textContent='Link Saweria disalin';}catch{t.textContent=b.dataset.copy;}t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);}));
+$$('[data-copy]').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);t.textContent='Link Saweria disalin';}catch{t.textContent=b.dataset.copy;}t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);});
+
+/* router */
+function setBg(k){$$('.bgs>div').forEach(d=>d.classList.toggle('on',d.dataset.bg===k));}
+const PAGES=['home','tro','fams','map','shop','robux','donasi','faq'];
+function go(){let p=location.hash.slice(1);if(!PAGES.includes(p))p='home';
+ $$('.page').forEach(s=>s.classList.toggle('on',s.id==='p-'+p));
+ $$('.menu a').forEach(a=>a.classList.toggle('on',a.dataset.p===p));
+ const s=$('#p-'+p);s.scrollTop=0;$('#crumb').textContent=s.dataset.name.toUpperCase();
+ document.title=(p==='home'?'':s.dataset.name+' — ')+'TRO.LABS';
+ if(p==='map')drawMap();else setBg(s.dataset.bg);
+ $('.menu a.on')?.scrollIntoView({block:'nearest',inline:'center'});}
+addEventListener('hashchange',go);go();
 </script>
 </body>
 </html>
