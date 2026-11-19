@@ -177,6 +177,11 @@ img{display:block;max-width:100%}
 .don h3{font-size:2rem}
 .amts{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
 .amts span{padding:7px 14px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--edge);font-weight:700;font-size:.9rem}
+.dline{display:grid;grid-template-columns:62px minmax(0,1fr) auto;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--edge)}
+.dline span{color:var(--sub);font-size:.85rem}
+.dline b{font-family:"Saira Condensed";font-size:1.5rem;color:var(--gold2);overflow:hidden;text-overflow:ellipsis}
+#dVUser{font-size:1.15rem;font-family:Saira}
+.dline button{padding:7px 14px;border-radius:8px;background:var(--gold);color:#1a1405;font-weight:700;font-size:.85rem}
 .copy{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.88rem;color:var(--sub);flex-wrap:wrap}
 .copy button{padding:5px 12px;border-radius:7px;border:1px solid var(--edge);font-size:.82rem}
 .copy button:hover{background:rgba(255,255,255,.08)}
@@ -425,10 +430,16 @@ details p{color:var(--sub);padding-bottom:18px;max-width:70ch}
         <label class="inp"><svg><use href="#rbx"/></svg><input id="dIn" type="number" inputmode="numeric" min="10" step="10" value="1000" aria-label="Jumlah Robux donasi"><span>Robux</span></label>
         <div class="total"><small>Bayar di Saweria</small><b id="dTot">Rp120.000</b></div>
         <label class="inp" style="margin:6px 0 16px"><input id="dUser" type="text" placeholder="Username Roblox kamu" autocomplete="off" style="font-family:Saira;font-size:1.05rem;font-weight:600" aria-label="Username Roblox"></label>
-        <button class="btn play" id="dGo" style="width:100%">Lanjut ke Saweria</button>
+        <button class="btn play" id="dGo" style="width:100%">Lanjut</button>
+        <div id="dStep" hidden style="margin-top:16px;padding:16px;border-radius:12px;background:rgba(0,0,0,.35);border:1px solid #d8b25c66">
+          <p style="color:var(--txt);font-weight:600;margin-bottom:12px">Salin 2 data ini ke Saweria:</p>
+          <div class="dline"><span>Nominal</span><b id="dVAmt"></b><button type="button" data-k="amt">Salin</button></div>
+          <div class="dline"><span>Dari</span><b id="dVUser"></b><button type="button" data-k="user">Salin</button></div>
+          <a class="btn play" href="https://saweria.co/trofamily" target="_blank" rel="noopener" style="width:100%;margin-top:14px">Buka Saweria</a>
+        </div>
         <ol class="ol" style="margin-top:18px">
-          <li><span><b>Isi Nama</b>Pakai username Roblox kamu yang asli, persis sama.</span></li>
-          <li><span><b>Isi nominal</b>Masukin angka rupiah di atas (udah otomatis disalin).</span></li>
+          <li><span><b>Pilih Robux & isi username</b>Klik Lanjut, nominal dan nama kamu muncul.</span></li>
+          <li><span><b>Salin ke Saweria</b>Tempel di kolom Nominal dan Dari, isi email & pesan.</span></li>
           <li><span><b>Bayar</b>QRIS, GoPay, OVO, DANA, ShopeePay, atau transfer bank.</span></li>
           <li><span><b>Cek di map</b>Masuk ON THE RUGS, efek donasi kamu muncul.</span></li>
         </ol>
@@ -525,9 +536,8 @@ $('#dGo').onclick=async()=>{const r=dcalc(),u=$('#dUser').value.trim();
  if(r<DMIN){toast(`Minimal R$${DMIN}`);return;}
  if(!/^[A-Za-z0-9_]{3,20}$/.test(u)){toast('Isi username Roblox yang bener dulu');$('#dUser').focus();return;}
  try{localStorage.setItem('troUser',u);}catch{}
- try{await navigator.clipboard.writeText(String(r*DRATE));}catch{}
- toast(`Nominal ${rp(r*DRATE)} disalin. Nama: ${u}`);
- setTimeout(()=>window.open('https://saweria.co/trofamily','_blank','noopener'),700);};
+ $('#dVAmt').textContent=String(r*DRATE);$('#dVUser').textContent=u;$('#dStep').hidden=false;$('#dStep').scrollIntoView({behavior:'smooth',block:'nearest'});};
+$$('#dStep .dline button').forEach(b=>b.onclick=async()=>{const v=$(b.dataset.k==='amt'?'#dVAmt':'#dVUser').textContent;try{await navigator.clipboard.writeText(v);toast(`${v} disalin`);b.textContent='Tersalin';setTimeout(()=>b.textContent='Salin',1500);}catch{toast(v);}});
 
 $$('[data-copy]').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);t.textContent='Link Saweria disalin';}catch{t.textContent=b.dataset.copy;}t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);});
 
