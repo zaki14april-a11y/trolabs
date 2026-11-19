@@ -298,7 +298,7 @@ details p{color:var(--sub);padding-bottom:18px;max-width:70ch}
       <a class="tile glass" href="#fams"><svg class="ic"><use href="#i-fams"/></svg><span class="go">›</span><b>TRO Fams</b><small>Cara jadi member</small></a>
       <a class="tile glass" href="#shop"><svg class="ic"><use href="#i-shop"/></svg><span class="go">›</span><b>Shop</b><small>Script & asset TRO LABS</small></a>
       <a class="tile glass" href="#robux"><svg class="ic"><use href="#i-rbx"/></svg><span class="go">›</span><b>TROlley Robux</b><small>Rp157rb / 1.000 R$</small></a>
-      <a class="tile glass" href="#donasi"><svg class="ic"><use href="#i-don"/></svg><span class="go">›</span><b>Donasi</b><small>Saweria & Robux</small></a>
+      <a class="tile glass" href="#donasi"><svg class="ic"><use href="#i-don"/></svg><span class="go">›</span><b>Donasi</b><small>Robux via Saweria</small></a>
     </div>
   </section>
 
@@ -415,27 +415,33 @@ details p{color:var(--sub);padding-bottom:18px;max-width:70ch}
   <section class="page" id="p-donasi" data-bg="battle" data-name="Donasi">
     <span class="kick">Support TRO</span>
     <h1 class="h title">Donasi</h1>
-    <p class="lead">Server, musik, dan update map jalan terus karena kalian. Pilih cara yang paling enak buat kamu.</p>
+    <p class="lead">Server, musik, dan update map jalan terus karena kalian. Donasi Robux sekarang bisa dibayar pakai rupiah lewat Saweria.</p>
     <div class="don">
       <div class="card glass cash">
-        <svg class="ic"><use href="#i-don"/></svg>
-        <h3>Donasi cash</h3>
-        <p>Lewat Saweria. Bisa pakai QRIS, GoPay, OVO, DANA, ShopeePay, atau transfer bank.</p>
-        <div class="amts"><span>Rp5.000</span><span>Rp10.000</span><span>Rp25.000</span><span>Rp50.000</span></div>
-        <a class="btn play" href="https://saweria.co/trofamily" target="_blank" rel="noopener">Donasi lewat Saweria</a>
-        <div class="copy">saweria.co/trofamily <button type="button" data-copy="https://saweria.co/trofamily">Salin link</button></div>
-        <p class="fine">Donasi sukarela dan tidak memberi item, title, atau keuntungan apa pun di dalam game.</p>
-      </div>
-      <div class="card glass">
         <svg class="ic"><use href="#i-rbx"/></svg>
         <h3>Donasi Robux</h3>
-        <p>Lewat sistem resmi Roblox, langsung di dalam map. Nama kamu masuk papan Top Donatur.</p>
-        <ol class="ol" style="margin:16px 0 20px">
-          <li><span><b>Masuk map</b>ON THE RUGS atau TUNNEL.</span></li>
-          <li><span><b>Buka menu Donate</b>Di pojok layar, atau datangi papan donasi.</span></li>
-          <li><span><b>Pilih nominal</b>Konfirmasi pembelian di Roblox.</span></li>
+        <p>Pilih jumlah Robux, bayar pakai Saweria. Donasi kamu masuk ke map sebagai donasi Robux, lengkap dengan efek dan papan Top Donatur.</p>
+        <div class="pk" id="dpk" style="margin-top:18px"></div>
+        <label class="inp"><svg><use href="#rbx"/></svg><input id="dIn" type="number" inputmode="numeric" min="10" step="10" value="1000" aria-label="Jumlah Robux donasi"><span>Robux</span></label>
+        <div class="total"><small>Bayar di Saweria</small><b id="dTot">Rp120.000</b></div>
+        <label class="inp" style="margin:6px 0 16px"><input id="dUser" type="text" placeholder="Username Roblox kamu" autocomplete="off" style="font-family:Saira;font-size:1.05rem;font-weight:600" aria-label="Username Roblox"></label>
+        <button class="btn play" id="dGo" style="width:100%">Lanjut ke Saweria</button>
+        <ol class="ol" style="margin-top:18px">
+          <li><span><b>Isi Nama</b>Pakai username Roblox kamu yang asli, persis sama.</span></li>
+          <li><span><b>Isi nominal</b>Masukin angka rupiah di atas (udah otomatis disalin).</span></li>
+          <li><span><b>Bayar</b>QRIS, GoPay, OVO, DANA, ShopeePay, atau transfer bank.</span></li>
+          <li><span><b>Cek di map</b>Masuk ON THE RUGS, efek donasi kamu muncul.</span></li>
         </ol>
-        <a class="btn ghost" href="https://www.roblox.com/games/97421109127420" target="_blank" rel="noopener">Buka ON THE RUGS</a>
+      </div>
+      <div class="card glass">
+        <svg class="ic"><use href="#i-don"/></svg>
+        <h3>Donasi bebas</h3>
+        <p>Mau dukung TRO tanpa hitungan Robux? Sawer berapa aja lewat Saweria.</p>
+        <div class="amts"><span>Rp5.000</span><span>Rp10.000</span><span>Rp25.000</span><span>Rp50.000</span></div>
+        <a class="btn ghost" href="https://saweria.co/trofamily" target="_blank" rel="noopener">Buka Saweria</a>
+        <div class="copy">saweria.co/trofamily <button type="button" data-copy="https://saweria.co/trofamily">Salin link</button></div>
+        <h3 style="font-size:1.4rem;margin-top:28px">Rate</h3>
+        <p>R$1.000 = Rp120.000 · R$100 = Rp12.000 · minimal R$10.</p>
       </div>
     </div>
   </section>
@@ -450,7 +456,7 @@ details p{color:var(--sub);padding-bottom:18px;max-width:70ch}
       <details><summary>Beli Robux di TROlley aman?</summary><p>Robux dikirim lewat payout komunitas Roblox ke username kamu, jadi kamu nggak perlu kasih password. Pastikan sudah join komunitas TRO - TEAM sebelum order.</p></details>
       <details><summary>Berapa lama order diproses?</summary><p>Begitu bukti bayar dicek dan di-ACC, tim langsung proses. Status order bisa dipantau di tiket Discord kamu.</p></details>
       <details><summary>Boleh jual ulang script TRO LABS?</summary><p>Nggak boleh. Script cuma buat map kamu sendiri, dan credit TRO TEAM wajib tetap ada.</p></details>
-      <details><summary>Kalau donasi dapat apa di game?</summary><p>Donasi cash di Saweria sifatnya sukarela dan tidak memberi item di game. Donasi Robux di dalam map bikin nama kamu masuk papan Top Donatur.</p></details>
+      <details><summary>Kalau donasi dapat apa di game?</summary><p>Pilih Donasi Robux di halaman Donasi, bayar di Saweria pakai username Roblox kamu. Donasinya masuk ke map sebagai Robux (Rp120.000 = R$1.000), lengkap dengan efek dan papan Top Donatur.</p></details>
       <details><summary>Mau undang TRO ke event fams kami?</summary><p>Buka tiket di Discord TRO dan pilih undangan atau kolaborasi. Divisi Partnership bakal hubungi kamu.</p></details>
       <details><summary>Map TRO ada berapa?</summary><p>Sekarang ON THE RUGS dan TUNNEL. Map baru selalu diumumkan duluan di Discord.</p></details>
     </div>
@@ -507,6 +513,22 @@ $('#rbxIn').addEventListener('input',calc);calc();
 
 /* copy */
 const t=$('#toast');
+function toast(m){t.textContent=m;t.classList.add('show');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('show'),2600);}
+/* donasi robux */
+const DRATE=120,DMIN=10;
+$('#dpk').innerHTML=[100,250,500,1000,2000,5000].map(r=>`<button type="button" data-r="${r}">${r.toLocaleString('id-ID')} R$<small>${rp(r*DRATE)}</small></button>`).join('');
+const dcalc=()=>{const r=Math.max(0,Math.floor(+$('#dIn').value||0));$('#dTot').textContent=rp(r*DRATE);$$('#dpk button').forEach(b=>b.classList.toggle('on',+b.dataset.r===r));return r;};
+$$('#dpk button').forEach(b=>b.onclick=()=>{$('#dIn').value=b.dataset.r;dcalc();});
+$('#dIn').addEventListener('input',dcalc);dcalc();
+try{$('#dUser').value=localStorage.getItem('troUser')||'';}catch{}
+$('#dGo').onclick=async()=>{const r=dcalc(),u=$('#dUser').value.trim();
+ if(r<DMIN){toast(`Minimal R$${DMIN}`);return;}
+ if(!/^[A-Za-z0-9_]{3,20}$/.test(u)){toast('Isi username Roblox yang bener dulu');$('#dUser').focus();return;}
+ try{localStorage.setItem('troUser',u);}catch{}
+ try{await navigator.clipboard.writeText(String(r*DRATE));}catch{}
+ toast(`Nominal ${rp(r*DRATE)} disalin. Nama: ${u}`);
+ setTimeout(()=>window.open('https://saweria.co/trofamily','_blank','noopener'),700);};
+
 $$('[data-copy]').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);t.textContent='Link Saweria disalin';}catch{t.textContent=b.dataset.copy;}t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);});
 
 /* router */
