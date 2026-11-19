@@ -555,7 +555,7 @@ $$('[data-copy]').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.w
 /* scene */
 const PAL={otr:[[216,178,92],[200,40,60]],dance:[[255,79,163],[125,76,255]],chill:[[60,200,190],[88,101,242]],battle:[[230,60,50],[216,178,92]],pull:[[250,170,50],[216,90,60]],tunnel:[[125,76,255],[255,79,163]],gold:[[216,178,92],[88,101,242]]};
 const cv=$('#scene'),cx=cv.getContext('2d'),RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let crestT=1,crestA=1,W,H,DPR,cur=[[216,178,92],[200,40,60]],tgt=cur.map(c=>c.slice()),T=0;
+let crestT=(location.hash===''||location.hash==='#home')?1:0,crestA=crestT,W,H,DPR,cur=[[216,178,92],[200,40,60]],tgt=cur.map(c=>c.slice()),T=0;
 const P=Array.from({length:70},()=>({x:Math.random(),y:Math.random(),r:Math.random()*1.6+.4,v:Math.random()*.0006+.0002,a:Math.random()*.6+.2}));
 function rs(){DPR=Math.min(devicePixelRatio||1,1.5);W=cv.width=innerWidth*DPR;H=cv.height=innerHeight*DPR;}
 addEventListener('resize',rs);rs();
